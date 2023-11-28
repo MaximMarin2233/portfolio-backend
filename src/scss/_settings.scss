@@ -81,7 +81,12 @@ a {
 .container {
   margin: 0 auto;
   padding: 0 var(--container-offset);
+  width: 100%;
   max-width: var(--container-width);
+
+  &--bigger {
+    max-width: 1890px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -104,4 +109,38 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.title {
+  position: relative;
+  margin: 0;
+  padding-left: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: normal;
+  color: var(--dark-color);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border-radius: 100%;
+    width: 36px;
+    height: 36px;
+    background-color: var(--main-color);
+    transform: translateY(-50%);
+  }
+
+  span {
+    position: relative;
+  }
+
+  &--without-circle {
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+  }
 }

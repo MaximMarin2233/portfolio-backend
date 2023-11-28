@@ -1,0 +1,45 @@
+.hero {
+  @include flex;
+
+  flex-direction: column;
+  justify-content: center;
+  padding: 115px 0;
+  min-height: 100vh;
+  background-color: var(--section-bg-color);
+
+  &__container {
+    position: relative;
+  }
+
+  &__content {
+    @include flex-all-sb;
+  }
+
+  &__text-wrapper {
+    max-width: 555px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    color: var(--dark-color);
+  }
+
+  &__links-wrapper {
+    @include flex-v-center;
+
+    gap: 20px;
+  }
+
+  &__image {
+    border: 5px solid var(--dark-color);
+    border-radius: 18px;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
+  }
+}

@@ -1,0 +1,49 @@
+.social {
+  @include flex-v-center;
+
+  position: absolute;
+  left: -315px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  gap: 15px;
+
+  &__title {
+    @include flex-v-center;
+
+    gap: 15px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 70px;
+      height: 2px;
+      background-color: var(--dark-color);
+    }
+  }
+
+  &__list {
+    @include flex-v-center;
+
+    gap: 15px;
+  }
+
+  &__link {
+    @include bg-cover;
+
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    &--gh {
+      background-image: url("../img/hero/hero-gh-icon.svg");
+    }
+
+    &--inst {
+      background-image: url("../img/hero/hero-inst-icon.svg");
+    }
+
+    &--fc {
+      background-image: url("../img/hero/hero-fc-icon.svg");
+    }
+  }
+}

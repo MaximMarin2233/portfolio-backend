@@ -1,0 +1,15 @@
+.btn {
+  border-radius: 12px;
+  padding: 15px 25px;
+  box-shadow: 0 4px 4px 0 rgb(0 0 0 / 15%);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: normal;
+  color: var(--dark-color);
+  background-color: var(--main-color);
+
+  &--transparent {
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
